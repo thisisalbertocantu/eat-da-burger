@@ -1,89 +1,57 @@
- html {
- 	background-color: #FFC04C;
- }
-
- body {
- 	width: 75%;
-	margin: 0 auto; 
-
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	background-color: white;
- }
-
- #cute_burger {
- 	display: block;
-    margin: auto;
- }
-
- h1 {
- 	text-align: center;
- 	font-family: 'Fontdiner Swanky', cursive;
- 	font-size: 65px;
- 	margin: 50px;
- }
-
- .burgerAvailable {
- 	font-family: 'Crafty Girls', cursive;
- 	font-weight: normal;
- 	font-size: 20px;
- 	text-align: center;
-
- 	border-radius: 25px;
- 	width: 100%;
- 	margin: 10px;
- 	padding: 10px;
- 	background-color: #b7ffc2;
- 	border: none;
- }
-
- .burgerAvailable:hover {
- 	background-color: #81ff94;
- }
-
- .burgerEaten {
- 	font-family: 'Crafty Girls', cursive;
- 	font-weight: normal;
- 	font-size: 20px;
- 	text-align: center;
-
- 	border-radius: 25px;
- 	margin: 10px;
- 	padding: 10px;
- 	background-color: #ffd1c9;
- }
-
- h2 {
-  	text-align: center;
- 	font-family: 'Fontdiner Swanky', cursive;
- 	font-size: 40px;
- 	margin: 50px;
- }
-
- .formContainer {
- 	background-color: orange;
- }
-
- .addBurgerButton {
- 	font-family: 'Crafty Girls', cursive;
- 	font-weight: normal;
- 	font-size: 20px;
- 	text-align: center;
-
- 	border-radius: 25px;
- 	width: 100%;
- 	margin: 0;
- 	padding: 10px;
- 	background-color: #FFC04C;
- 	border: none;
- }
-
-.addBurgerButton:active {
-	background-color: #FFC04C;
+body{
+    background-image: url("../images/bg.jpg");
 }
 
-.burgerFooter {
-	background-color: #FFC04C;
-	padding: 20px 0;
+p, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color:white;
+    text-shadow: 2px 2px 3px #0000007e;
+}
+
+.eat-btn, .submit-btn{
+    font-size: 20px !important;
+    padding: 5px 30px 5px 30px !important;
+    border-radius: 20px !important;
+    font-weight: 800 !important;
+    color:white !important;
+    text-shadow: 2px 2px 3px #00000033;
+}
+
+h2{
+    font-weight: 800;
+}
+
+.food-container{
+    background-color: #169b5b;
+}
+
+#burger{
+    width:50%;
+}
+
+/* same height columns styles */
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.display-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    text-align: center;
 }
