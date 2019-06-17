@@ -1,42 +1,38 @@
-<h1>Eat-Da-Burger!</h1>
-
-<main>
-  <div class="container">
-    <div class="row">
-      <div class="col s6">
-        {{#each burgers}}
-          {{#unless this.devoured}}
-            <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
-              </form>
-            </div>
-          {{/unless}}
-        {{/each}}
-      </div>
-
-      <div class="col s6">
-        {{#each burgers}}
-          {{#if this.devoured}}
-            <div class='burgerEaten'>
-              <div>
-                {{this.burger_name}}
-              </div>
-            </div>
-          {{/if}}
-        {{/each}}
-      </div>
+<div class="row justify-content-around">
+  <div class="col-12 col-md-12 col-lg-5 p-4 my-4 food-container rounded">
+    <h2>Available Burgers</h2>
+    <hr>
+    {{#each burgers}}
+    {{#unless this.devoured}}
+    <div>
+      <p>{{burger_name}}
+        <button class="eat-btn btn blue-gradient btn-rounded" data-id="{{id}}">Eat burger</button></p>
     </div>
+    {{/unless}}
+    {{/each}}
   </div>
-</main>
+  <div class="col-12 col-md-12 col-lg-5 p-4 my-4 food-container rounded">
+    <h2>Devoured Burgers</h2>
+    <hr>
+    {{#each burgers}}
+    {{#if this.devoured}}
+    <p>{{burger_name}}</p>
+    {{/if}}
+    {{/each}}
+  </div>
+</div>
 
-<h2>Add A Burger Option</h2>
+<div class="row row-centered">
+  <div class="col-12 col-md-12 col-lg-12 p-4 my-4 col-centered rounded">
+    <h2>Create a Burger</h2>
+    <form class="create-form">
 
-<div class="row">
-  <div class="col s12">
-    <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
-      <button type="submit" class="addBurgerButton">Add The Burger</button>
+      <div class="form-group">
+        <input type="text" id="burger" name="name">
+      </div>
+
+      <button type="submit" class="submit-btn btn blue-gradient btn-rounded">Add Burger</button>
     </form>
+
   </div>
 </div>
